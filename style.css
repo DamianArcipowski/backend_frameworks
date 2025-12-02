@@ -1,0 +1,164 @@
+.navbar {
+    background: linear-gradient(135deg, #0a0e1a 0%, #1a2332 100%);
+    border-bottom: 2px solid rgba(0, 217, 255, 0.2);
+    padding: 15px 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar a, .navbar i {
+    color: #8b9db5;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar a:hover {
+    color: #00d9ff;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00d9ff, #ff0080);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+body {
+    background: linear-gradient(180deg, #0a0e1a 0%, #1a2332 100%);
+}
+
+.card {
+    background: #1a2332 !important;
+    border: 1px solid rgba(0, 217, 255, 0.15) !important;
+    border-radius: 12px !important;
+    padding: 30px !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.card.php-card:hover {
+    border-color: #00d9ff !important;
+    box-shadow: 0 20px 40px rgba(0, 217, 255, 0.3) !important;
+}
+
+.card.ruby-card:hover {
+    border-color: #ff0080 !important;
+    box-shadow: 0 20px 40px rgba(255, 0, 128, 0.3) !important;
+}
+
+.card.node-card:hover {
+    border-color: #88ff00 !important;
+    box-shadow: 0 20px 40px rgba(136, 255, 0, 0.3) !important;
+}
+
+.card.python-card:hover {
+    border-color: #ffaa00 !important;
+    box-shadow: 0 20px 40px rgba(255, 170, 0, 0.3) !important;
+}
+
+/* To fix */
+.card h5 {
+    color: #e8f4f8;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+/* To fix */
+.card h5::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #00d9ff, #ff0080);
+    border-radius: 2px;
+}
+
+.card p {
+    color: #8b9db5;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card a {
+    background: linear-gradient(135deg, #00d9ff 0%, #0099ff 100%) !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 12px 30px !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3) !important;
+}
+
+.card a::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.3), transparent) !important;
+    transition: left 0.5s ease !important;
+}
+
+.card a:hover::before {
+    left: 100% !important;
+}
+
+.card a:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 25px rgba(0, 217, 255, 0.5) !important;
+}
+
+.card.ruby-card a {
+    background: linear-gradient(135deg, #ff0080 0%, #cc0066 100%) !important;
+    box-shadow: 0 4px 15px rgba(255, 0, 128, 0.3) !important;
+}
+
+.card.node-card a {
+    background: linear-gradient(135deg, #88ff00 0%, #66cc00 100%) !important;
+    box-shadow: 0 4px 15px rgba(136, 255, 0, 0.3) !important;
+}
+
+.card.python-card a {
+    background: linear-gradient(135deg, #ffaa00 0%, #ff8800 100%) !important;
+    box-shadow: 0 4px 15px rgba(255, 170, 0, 0.3) !important;
+}
+
+.card img {
+    max-width: 130px;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.card.ruby-card img, .card.python-card img {
+    max-width: 100px;
+}
+
+.card:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* To fix */
+.text-body-secondary {
+    color: #8b9db5 !important;
+}

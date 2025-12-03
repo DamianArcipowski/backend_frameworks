@@ -1,0 +1,8 @@
+{
+    "Active Record": "Wzorzec ORM, gdzie każda klasa modelu odpowiada tabeli w bazie danych.",
+    "MVC Architecture": "Czysta separacja logiki biznesowej (Model), interfejsu (View) i kontroli (Controller).",
+    "Convention over Configuration": "Minimalna konfiguracja dzięki sensownym domyślnym ustawieniom i konwencjom nazewnictwa.",
+    "DRY Principle": "Don't Repeat Yourself - każda logika biznesowa powinna mieć jedno, jednoznaczne miejsce.",
+    "Migrations": "Wersjonowanie schematu bazy danych jako kod Ruby, łatwe do cofania i deploymentu.",
+    "RubyGems": "Bogaty ekosystem gemów (bibliotek) do praktycznie każdej funkcjonalności."
+}

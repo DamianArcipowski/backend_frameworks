@@ -1,0 +1,8 @@
+{
+    "Lekki i prosty": "Minimalistyczne podejście - tylko podstawowe funkcje, reszta to Twój wybór.",
+    "Rozszerzalny": "Bogaty ekosystem rozszerzeń: Flask-SQLAlchemy, Flask-Login, Flask-RESTful i wiele innych.",
+    "Jinja2 Templates": "Potężny silnik szablonów z dziedziczeniem, makrami i filtrami.",
+    "Wbudowany debugger": "Interaktywny debugger w przeglądarce ułatwia development.",
+    "URL Routing": "Elegancki system routingu z dekoratorami i obsługą RESTful URLs.",
+    "WSGI compliant": "Zgodność ze standardem WSGI, łatwy deployment na różne serwery."
+}

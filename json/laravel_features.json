@@ -1,0 +1,8 @@
+{
+    "Eloquent ORM": "Intuicyjny system do pracy z bazami danych. Każda tabela ma odpowiadający jej \"Model\".",
+    "Routing": "Prosty i ekspresyjny system routingu z obsługą REST, middleware i grup tras.",
+    "Blade Templates": "Potężny silnik szablonów z dziedziczeniem layoutów i komponentami.",
+    "Bezpieczeństwo": "Wbudowana ochrona przed CSRF, XSS, SQL Injection i innymi zagrożeniami.",
+    "Artisan CLI": "Narzędzie wiersza poleceń do generowania kodu, migracji baz danych i więcej.",
+    "Ecosystem": "Bogaty ekosystem: Forge, Vapor, Nova, Livewire, Inertia.js i wiele innych."
+}

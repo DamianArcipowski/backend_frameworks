@@ -1,0 +1,8 @@
+{
+    "Minimalistyczny": "Lekki i elastyczny, daje programiście kontrolę nad strukturą aplikacji.",
+    "Middleware": "Potężny system middleware do obsługi żądań, autoryzacji, logowania i więcej.",
+    "Routing": "Elastyczny system routingu z obsługą parametrów, query strings i wzorców.",
+    "Rozszerzalny": "Ogromny ekosystem wtyczek i middleware dostępnych przez npm.",
+    "Wydajność": "Asynchroniczna natura Node.js zapewnia wysoką wydajność przy wielu połączeniach.",
+    "JavaScript": "Ten sam język na froncie i backendzie - idealne dla full-stack developerów."
+}

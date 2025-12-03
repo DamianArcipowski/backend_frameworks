@@ -10,6 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/page_loader.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -17,12 +19,31 @@
             <div class="col">
                 <nav class="navbar bg-body-tertiary">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" id="main-page" href="#">
                         <i class="bi bi-house"></i>
                         Strona główna
                         </a>
                     </div>
                 </nav>
+            </div>
+        </div>
+        <div class="row mb-5" id="dynamic-content"></div>
+        <div class="row mb-3">
+            <div class="discover-content">
+                <span class="discover-badge">
+                    <i class="bi bi-book"></i>
+                    Przewodnik po technologiach web
+                </span>
+                <h1 class="discover-header">
+                    Poznaj popularne
+                    <span class="discover-highlight">frameworki webowe</span>
+                </h1>
+                <p class="discover-description">
+                    Kompleksowy przegląd najpopularniejszych narzędzi do tworzenia 
+                    aplikacji internetowych. Dowiedz się, czym różnią się od siebie 
+                    i kiedy warto ich użyć.
+                </p>
+                <h3 class="technologies-header">Poznaj technologie:</h3>
             </div>
         </div>
         <div class="row mb-5">
@@ -32,7 +53,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Laravel</h5>
                         <p class="card-text">Nowoczesny framework PHP, który ułatwia tworzenie aplikacji webowych dzięki eleganckiej składni i rozbudowanemu ekosystemowi narzędzi.</p>
-                        <a href="#" class="btn btn-primary">Odkryj PHP</a>
+                        <a href="#laravel" id="laravel" class="btn btn-primary">Odkryj PHP</a>
                     </div>
                 </div>
             </div>
@@ -42,35 +63,32 @@
                     <div class="card-body">
                         <h5 class="card-title">Ruby on rails</h5>
                         <p class="card-text">Framework dla języka Ruby, który pozwala szybko budować aplikacje webowe dzięki konwencjom i gotowym rozwiązaniom.</p>
-                        <a href="#" class="btn btn-primary">Odkryj Ruby</a>
+                        <a href="#rails" id="rails" class="btn btn-primary">Odkryj Ruby</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col d-flex justify-content-center align-items-center">
+            <div class="col d-flex justify-content-center align-items-start">
                 <div class="card node-card" style="width: 18rem;">
                     <img src="images/nodejs.webp" class="card-img-top" alt="node">
                     <div class="card-body">
                         <h5 class="card-title">Express.js</h5>
                         <p class="card-text">Minimalistyczny framework Node.js, który umożliwia szybkie tworzenie serwerów i API przy użyciu prostych i elastycznych narzędzi.</p>
-                        <a href="#" class="btn btn-primary">Odkryj Node.js</a>
+                        <a href="#express" id="express" class="btn btn-primary">Odkryj Node.js</a>
                     </div>
                 </div>
             </div>
-            <div class="col d-flex justify-content-center align-items-center">
+            <div class="col d-flex justify-content-center align-items-start">
                 <div class="card python-card" style="width: 18rem;">
                     <img src="images/python.webp" class="card-img-top" alt="python">
                     <div class="card-body">
                         <h5 class="card-title">Flask</h5>
                         <p class="card-text">Lekki framework Python, idealny do tworzenia prostych aplikacji webowych i prototypów przy minimalnym nakładzie kodu.</p>
-                        <a href="#" class="btn btn-primary">Odkryj Python</a>
+                        <a href="#flask" id="flask" class="btn btn-primary">Odkryj Python</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">main content</div>
         </div>
         <div class="row">
             <div class="col">
@@ -86,6 +104,9 @@
                         <li class="ms-3">
                             <a class="text-body-secondary" href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                         </li> 
+                        <li class="ms-3">
+                            <a class="text-body-secondary" href="https://github.com" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                        </li>
                     </ul> 
                 </footer>
             </div>

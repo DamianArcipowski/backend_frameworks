@@ -1,0 +1,28 @@
+# app.py - Podstawowa aplikacja Flask
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+# Prosty endpoint
+@app.route('/')
+def home():
+    return 'Hello, Flask!'
+
+# Endpoint z szablonem HTML
+@app.route('/welcome')
+def welcome():
+    return render_template('welcome.html', 
+                         name='World')
+
+# Endpoint z parametrem
+@app.route('/user/<username>')
+def show_user(username):
+    return f'User: {username}'
+
+# Obsługa błędów
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+if __name__ == '__main__':
+    app.run(debug=True)

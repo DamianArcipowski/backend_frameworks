@@ -1,0 +1,31 @@
+# routes.py - Zaawansowany routing
+from flask import Blueprint, request, redirect, url_for, render_template, flash
+
+# Blueprint - modularyzacja aplikacji
+posts_bp = Blueprint('posts', __name__, url_prefix='/posts')
+
+# Pojedynczy post
+@posts_bp.route('/<int:post_id>')
+def show(post_id):
+    post = Post.query.get_or_404(post_id)
+    return render_template('posts/show.html', post=post)
+
+# Nowy post (formularz)
+@posts_bp.route('/new', methods=['GET', 'POST'])
+def new():
+    if request.method == 'POST':
+        title = request.form['title']
+        content = request.form['content']
+        
+        post = Post(title=title, content=content)
+        db.session.add(post)
+        db.session.commit()
+        
+        flash('Post został utworzony!', 'success')
+        return redirect(url_for('posts.show', post_id=post.id))
+    
+    return render_template('posts/new.html')
+
+# Rejestracja blueprinta w app.py:
+# from routes import posts_bp
+# app.register_blueprint(posts_bp)

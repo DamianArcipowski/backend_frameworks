@@ -1,0 +1,33 @@
+// app.js - Podstawowa aplikacja Express
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// Middleware do parsowania JSON
+app.use(express.json());
+
+// Statyczne pliki (CSS, JS, obrazy)
+app.use(express.static('public'));
+
+// GET endpoint
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+// Endpoint z parametrem
+app.get('/user/:id', (req, res) => {
+  const userId = req.params.id;
+  res.json({ userId, message: 'User profile' });
+});
+
+// POST endpoint
+app.post('/api/data', (req, res) => {
+  const data = req.body;
+  console.log('Received:', data);
+  res.json({ success: true, data });
+});
+
+// Start serwera
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});

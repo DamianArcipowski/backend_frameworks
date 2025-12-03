@@ -1,0 +1,19 @@
+# config/routes.rb
+Rails.application.routes.draw do
+
+  # Strona główna
+  root 'posts#index'
+  
+  # Pełen zestaw REST-owych endpointów
+  resources :posts do
+    resources :comments, only: [:create, :destroy]
+  end
+  
+  # Własne endpointy
+  get '/about', to: 'pages#about'
+  post '/search', to: 'posts#search'
+  
+  # Endpoint z ograniczeniem
+  get '/posts/:id', to: 'posts#show', 
+      constraints: { id: /[0-9]+/ }
+end

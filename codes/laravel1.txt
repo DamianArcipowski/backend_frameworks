@@ -1,0 +1,16 @@
+// routes/web.php
+use App\Http\Controllers\PostController;
+
+// Prosty endpoint
+Route::get('/', function () {
+    return view('welcome');
+});
+
+// Endpoint z parametrem
+Route::get('/posts/{id}', [PostController::class, 'show']);
+
+// Grupa endpointów z middleware
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::post('/posts', [PostController::class, 'store']);
+});

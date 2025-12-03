@@ -1,0 +1,27 @@
+// app/Http/Controllers/PostController.php
+namespace App\Http\Controllers;
+
+use App\Models\Post;
+use Illuminate\Http\Request;
+
+class PostController extends Controller
+{ 
+    // Wyświetl jeden post
+    public function show(Post $post)
+    {
+        return view('posts.show', compact('post'));
+    }
+    
+    // Zapisz nowy post
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'title' => 'required|max:255',
+            'content' => 'required',
+        ]);
+        
+        $post = Post::create($validated);
+        
+        return redirect()->route('posts.show', $post);
+    }
+}

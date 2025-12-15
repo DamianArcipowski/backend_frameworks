@@ -1,8 +1,6 @@
 {
-    "Minimalistyczny": "Lekki i elastyczny, daje programiście kontrolę nad strukturą aplikacji.",
-    "Middleware": "Potężny system middleware do obsługi żądań, autoryzacji, logowania i więcej.",
-    "Routing": "Elastyczny system routingu z obsługą parametrów, query strings i wzorców.",
-    "Rozszerzalny": "Ogromny ekosystem wtyczek i middleware dostępnych przez npm.",
-    "Wydajność": "Asynchroniczna natura Node.js zapewnia wysoką wydajność przy wielu połączeniach.",
-    "JavaScript": "Ten sam język na froncie i backendzie - idealne dla full-stack developerów."
+    "Minimalizm": "Lekki i elastyczny, nie narzuca struktury aplikacji.",
+    "Modularność": "Kod można łatwo podzielić na moduły, co ułatwia skalowanie większych aplikacji.",
+    "Asynchroniczność": "Obsługuje setki lub tysiące równoczesnych połączeń dzięki jednowątkowości Node.js.",
+    "API i mikroserwisy": "Popularny w budowie REST API, GraphQL API oraz jako warstwa backendowa"
 }

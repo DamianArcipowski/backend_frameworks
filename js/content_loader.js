@@ -49,19 +49,22 @@ function getSourceCodeExamples() {
     }
 }
 
-// TO BE CHECKED
 function initCodeTabs() {
     const tabs = document.querySelectorAll('.code-tab');
     
     tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            const tabName = this.dataset.tab;
+        tab.addEventListener('click', event => {
+            const tabName =  event.currentTarget.dataset.tab;
             
-            tabs.forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.code-content').forEach(c => c.classList.add('hidden'));
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            const contentBlock = document.querySelectorAll('.code-content');
+            contentBlock.forEach(content => content.classList.add('hidden'));
             
-            this.classList.add('active');
-            document.querySelector(`[data-content="${tabName}"]`).classList.remove('hidden');
+            event.currentTarget.classList.add('active');
+
+            const codeTab = document.querySelector(`[data-content="${tabName}"]`);
+            codeTab.classList.remove('hidden');
         });
     });
 }
@@ -93,28 +96,36 @@ function loadKeyFeaturesFromJSON() {
 
 laravel.addEventListener('click', () => {
     loadFramework('laravel');
-    setTimeout(getSourceCodeExamples, 50);
-    setTimeout(loadKeyFeaturesFromJSON, 50);
+    setTimeout(getSourceCodeExamples, 100);
+    setTimeout(loadKeyFeaturesFromJSON, 100);
 });
 
 rails.addEventListener('click', () => {
     loadFramework('rails');
-    setTimeout(getSourceCodeExamples, 50);
-    setTimeout(loadKeyFeaturesFromJSON, 50);
+    setTimeout(getSourceCodeExamples, 100);
+    setTimeout(loadKeyFeaturesFromJSON, 100);
 });
 
 express.addEventListener('click', () => {
     loadFramework('express');
-    setTimeout(getSourceCodeExamples, 50);
-    setTimeout(loadKeyFeaturesFromJSON, 50);
+    setTimeout(getSourceCodeExamples, 100);
+    setTimeout(loadKeyFeaturesFromJSON, 100);
 });
 
 flask.addEventListener('click', () => {
     loadFramework('flask');
-    setTimeout(getSourceCodeExamples, 50);
-    setTimeout(loadKeyFeaturesFromJSON, 50);
+    setTimeout(getSourceCodeExamples, 100);
+    setTimeout(loadKeyFeaturesFromJSON, 100);
 });
 
-mainPage.addEventListener('click', () => { 
-    contentSection.innerHTML = ''; 
+mainPage.addEventListener('click', () => {
+    $('#dynamic-content').slideUp(500, function() {
+        $(this).html('');
+        $(this).css('display', 'block');
+    });
+});
+
+$(document).ready(function() {
+    $('.card').css('opacity', 0)
+        .animate({ opacity: 1 }, 1000);
 });
